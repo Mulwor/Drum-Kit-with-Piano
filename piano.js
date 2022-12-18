@@ -100,9 +100,22 @@ function menu(e){
   document.querySelector(".text").innerHTML = songs[song];
 }
 
+function clickoutput(e){
+  let key = e.target.attributes["data-key"].value;
+  let audio = document.querySelector(`audio[data-key="${key}`)
+  let note = document.querySelector(`div[data-key="${key}"]`);
+  if (!audio) return; 
 
-keys.forEach((key) => key.addEventListener('mousedown', output));
-keys_black.forEach((key) => key.addEventListener('mousedown', output));
+  audio.currentTime = 0;
+  audio.play();
+  note.classList.add("playing");
+
+  note.style.backgroundColor = randomColor();
+}
+
+
+keys.forEach((key) => key.addEventListener('mousedown', clickoutput));
+keys_black.forEach((key) => key.addEventListener('mousedown', clickoutput));
 menu_keys.forEach(key => key.addEventListener('click', menu));
 
 keys.forEach((key) => key.addEventListener('transitionend', removeTransition));

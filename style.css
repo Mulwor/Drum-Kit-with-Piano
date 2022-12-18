@@ -10,13 +10,15 @@ h2 {
   margin: 0;
 }
 
-.body {
-  background-color: #000000;
+body {
+  background-image: url('./assets/555_zakat-640x360.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text {
   margin: 0;
-  padding: 0;
+  padding-top: 47px;
   font-family: Roboto;
   font-weight: 400;
   letter-spacing: 2px;
@@ -95,9 +97,55 @@ h2 {
   text-orientation: mixed;
 }
 
-.note_name__white {
+.note_name--white {
   display: block;
   text-align: center;
   font-size: 18px;
   text-orientation: mixed;
+}
+
+.menu {
+  width: 1670px;
+  margin-left: 100px;
+  margin-top: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid white;
+}
+
+.menu .song_menu {
+  margin-right: 250px;
+}
+
+.menu .song_menu__article {
+  font-family: Roboto;
+  font-size: 24px;
+  color: #ffffff;
+  padding-top: 47px;
+}
+
+.menu .song_menu__bar {
+  margin-top: 15px;
+}
+
+.menu .song_menu__bar--item {
+  margin-bottom: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.menu .song {
+  min-width: 1050px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
